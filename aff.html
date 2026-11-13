@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <input
+        id="input"
+        class="input is-medium"
+        placeholder="Create your new todos!!"
+        type="text"
+      />
+      <button class="button is-white" onclick="verif()">Add</button>
+      <div id="container"></div>
+    </section>
+
+    <script>
+      let addst = [];
+      const input = document.getElementById("input");
+      const container = document.getElementById("container");
+      const verif = () => {
+        const inputValue = input.value;
+        addst.push(input.value);
+        input.value = "";
+        renderlist();
+      };
+
+      const renderlist = () => {
+        container.textContent = "";
+        for (let i = 0; i < addst.length; i++) {
+          const newDiv = document.createElement("div");
+          newDiv.textContent = addst[i];
+          container.appendChild(newDiv);
+        }
+      };
+    </script>
+  </body>
+</html>

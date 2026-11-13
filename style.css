@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f8;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.container {
+  background: white;
+  width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #29283d;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: #999;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  background: #f3f3f7;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  background: #7059d9;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.divv2 {
+  height: 200px;
+  overflow-y: scroll;
+}
+.divv {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.task-list {
+  width: 95%;
+  color: #fafafd;
+  min-height: 50px;
+  padding: 15px;
+  margin-top: 15px;
+  list-style: none;
+  background: #000000;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.style {
+  margin-top: 10px;
+  padding: 16px 32px;
+  background: #5600abb9;
+  color: #18181b;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.style:hover {
+  border-radius: 12px;
+  transform: scale(1.1);
+}

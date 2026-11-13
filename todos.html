@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Todo List</h1>
+      <p class="subtitle">Organize your daily tasks</p>
+      <div class="divv"><strong>My Tasks</strong></div>
+      <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <button onclick="addTask()">+</button>
+      </div>
+
+      <div id="taskList" class="divv2"></div>
+
+      <button class="style" onclick="clearAll()">clearall</button>
+    </div>
+
+    <script>
+      let addst = [];
+
+      const input = document.getElementById("taskInput");
+      const container = document.getElementById("tasklList");
+      const clear = document.getElementById("clearAll");
+
+      const addTask = () => {
+        const inputValue = input.value;
+        addst.push(input.value);
+        input.value = "";
+        renderlist();
+      };
+
+      const renderlist = () => {
+        taskList.textContent = "";
+        for (let i = 0; i < addst.length; i++) {
+          const newDiv = document.createElement("div");
+          newDiv.textContent = i + 1 + ". " + addst[i];
+          newDiv.classList.add("task-list");
+          taskList.appendChild(newDiv);
+        }
+      };
+      const button = () => {
+        const newButton = document.createElement("button");
+
+        taskList.appendChild(NewDiv);
+      };
+
+      let clearAll = () => {
+        addst = [];
+        renderlist();
+      };
+    </script>
+  </body>
+</html>
