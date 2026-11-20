@@ -63,6 +63,8 @@ button {
   margin-bottom: 15px;
 }
 .task-list {
+  display: flex;
+  justify-content: space-between;
   width: 95%;
   color: #fafafd;
   min-height: 50px;
@@ -89,4 +91,22 @@ button {
 .style:hover {
   border-radius: 12px;
   transform: scale(1.1);
+}
+.task-list button {
+  background: #fff0f0;
+  color: #ef4444;
+  border: 1px solid #fecaca;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-list button:hover {
+  background: #ef4444;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #ef444455;
 }

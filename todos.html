@@ -22,7 +22,7 @@
     </div>
 
     <script>
-      let addst = [];
+      let addst = ["sadas", "asdas", "asdasdas"];
 
       const input = document.getElementById("taskInput");
       const container = document.getElementById("tasklList");
@@ -41,15 +41,16 @@
           const newDiv = document.createElement("div");
           newDiv.textContent = i + 1 + ". " + addst[i];
           newDiv.classList.add("task-list");
+          const button = document.createElement("button");
+          button.textContent = "Remove x";
+          button.onclick = function () {
+            addst.splice(i, 1);
+            renderlist();
+          };
+          newDiv.appendChild(button);
           taskList.appendChild(newDiv);
         }
       };
-      const button = () => {
-        const newButton = document.createElement("button");
-
-        taskList.appendChild(NewDiv);
-      };
-
       let clearAll = () => {
         addst = [];
         renderlist();
